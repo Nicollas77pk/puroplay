@@ -1,0 +1,14 @@
+{
+  "name": "m3u8-proxy",
+  "version": "1.0.0",
+  "description": "Proxy de m3u8 para HTTPS via Render",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "request": "^2.88.2",
+    "cors": "^2.8.5"
+  }
+}
