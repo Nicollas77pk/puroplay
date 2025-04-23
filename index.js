@@ -5,7 +5,7 @@ const app = express();
 
 // Proxy para qualquer link do servidor HTTP
 app.use('/proxy', createProxyMiddleware({
-  target: 'http://lexus.hubns.top', // <- Altere aqui para o host que você quiser
+  target: 'https://onplaytv.net', // <- Altere aqui para o host que você quiser
   changeOrigin: true,
   pathRewrite: {
     '^/proxy': '', // remove "/proxy" do início da URL
