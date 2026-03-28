@@ -3,12 +3,12 @@ const https = require('https');
 module.exports = async (req, res) => {
   try {
     const path = req.url === '/' ? '' : req.url;
-    const targetUrl = 'https://assistir.biz/' + path;
+    const targetUrl = 'https://futebol7k.com/' + path;
 
     https.get(targetUrl, {
       headers: {
         'User-Agent': req.headers['user-agent'] || 'Mozilla/5.0',
-        'Referer': 'https://assistir.biz/',
+        'Referer': 'https://futebol7k.com/',
       }
     }, (resp) => {
       let data = '';
@@ -20,17 +20,17 @@ module.exports = async (req, res) => {
           const headers = { ...resp.headers };
           delete headers['x-frame-options'];
           delete headers['content-security-policy'];
-
+https://futebol7k.com/
           // Reescrever URLs absolutas e relativas para seu domínio
           data = data
-            .replace(/https:\/\/assistir\.biz\//g, '/')
-            .replace(/src="https:\/\/assistir\.biz\/([^"]+)"/g, 'src="/$1"')
-            .replace(/src='https:\/\/assistir\.biz\/([^']+)'/g, "src='/$1'")
-            .replace(/href="https:\/\/assistir\.biz\/([^"]+)"/g, 'href="/$1"')
-            .replace(/href='https:\/\/assistir\.biz\/([^']+)'/g, "href='/$1'")
-            .replace(/action="https:\/\/assistir\.biz\/([^"]+)"/g, 'action="/$1"')
-            .replace(/url\(["']?https:\/\/assistir\.biz\/(.*?)["']?\)/g, 'url("/$1")')
-            .replace(/<iframe([^>]*)src=["']https:\/\/assistir\.biz\/([^"']+)["']/g, '<iframe$1src="/$2"')
+            .replace(/https:\/\/futebol7k\.com\//g, '/')
+            .replace(/src="https:\/\/futebol7k\.com/([^"]+)"/g, 'src="/$1"')
+            .replace(/src='https:\/\/futebol7k\.com\/([^']+)'/g, "src='/$1'")
+            .replace(/href="https:\/\/futebol7k\.com\/([^"]+)"/g, 'href="/$1"')
+            .replace(/href='https:\/\/futebol7k\.com\/([^']+)'/g, "href='/$1'")
+            .replace(/action="https:\/\/futebol7k\.com\/([^"]+)"/g, 'action="/$1"')
+            .replace(/url\(["']?https:\/\/futebol7k\.com\/(.*?)["']?\)/g, 'url("/$1")')
+            .replace(/<iframe([^>]*)src=["']https:\/\/futebol7k\.com\/([^"']+)["']/g, '<iframe$1src="/$2"')
             .replace(/<base[^>]*>/gi, '');
 
           // Alterar título, remover ícone e inserir meta de verificação
